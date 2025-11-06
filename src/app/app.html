@@ -230,24 +230,24 @@
           <clipPath id="a"><path fill="#fff" d="M0 0h982v239H0z" /></clipPath>
         </defs>
       </svg>
-      <h1>Hello, {{ title() }}</h1>
+      <h1>Hello, my name is {{ title() }}</h1>
       <p>Congratulations! Your app is running. 🎉</p>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
       <div class="pill-group">
         @for (item of [
-          { title: 'Explore the Docs', link: 'https://angular.dev' },
-          { title: 'Learn with Tutorials', link: 'https://angular.dev/tutorials' },
-          { title: 'Prompt and best practices for AI', link: 'https://angular.dev/ai/develop-with-ai'},
-          { title: 'CLI Docs', link: 'https://angular.dev/tools/cli' },
-          { title: 'Angular Language Service', link: 'https://angular.dev/tools/language-service' },
-          { title: 'Angular DevTools', link: 'https://angular.dev/tools/devtools' },
+          { title: 'Advanced Signals', link: 'signals-advanced', target: '_self' },
+          { title: 'Signal Patterns', link: 'signals-patterns', target: '_self' },
+          { title: 'Signal Internals', link: 'signals-internals', target: '_self' },
+          { title: 'Signal Deep Dive', link: 'signals-deep-dive', target: '_self' },
+          { title: 'Explore the Docs', link: 'https://angular.dev', target: '_blank' },
+          { title: 'Signal Docs', link: 'https://angular.dev/guide/signals', target: '_blank' }
         ]; track item.title) {
           <a
             class="pill"
             [href]="item.link"
-            target="_blank"
+            target="{{ item.target }}"
             rel="noopener"
           >
             <span>{{ item.title }}</span>
@@ -267,7 +267,7 @@
       </div>
       <div class="social-links">
         <a
-          href="https://github.com/angular/angular"
+          href="https://github.com/alex-migwi/signal-playground"
           aria-label="Github"
           target="_blank"
           rel="noopener"
@@ -286,7 +286,7 @@
           </svg>
         </a>
         <a
-          href="https://twitter.com/angular"
+          href="https://twitter.com/MuturiAlex"
           aria-label="Twitter"
           target="_blank"
           rel="noopener"
